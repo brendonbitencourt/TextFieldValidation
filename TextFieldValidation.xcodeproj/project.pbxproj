@@ -15,6 +15,7 @@
 		DA0D37B025DC59D20005BD12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0D37AE25DC59D20005BD12 /* LaunchScreen.storyboard */; };
 		DA0D37BB25DC59D30005BD12 /* TextFieldValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D37BA25DC59D30005BD12 /* TextFieldValidationTests.swift */; };
 		DA0D37C625DC59D30005BD12 /* TextFieldValidationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D37C525DC59D30005BD12 /* TextFieldValidationUITests.swift */; };
+		DA0D37D725DC5AF30005BD12 /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D37D625DC5AF30005BD12 /* TextFieldValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DA0D37C125DC59D30005BD12 /* TextFieldValidationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextFieldValidationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0D37C525DC59D30005BD12 /* TextFieldValidationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidationUITests.swift; sourceTree = "<group>"; };
 		DA0D37C725DC59D30005BD12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA0D37D625DC5AF30005BD12 /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				DA0D37AC25DC59D20005BD12 /* Assets.xcassets */,
 				DA0D37AE25DC59D20005BD12 /* LaunchScreen.storyboard */,
 				DA0D37B125DC59D20005BD12 /* Info.plist */,
+				DA0D37D625DC5AF30005BD12 /* TextFieldValidation.swift */,
 			);
 			path = TextFieldValidation;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA0D37D725DC5AF30005BD12 /* TextFieldValidation.swift in Sources */,
 				DA0D37A825DC59D10005BD12 /* ViewController.swift in Sources */,
 				DA0D37A425DC59D10005BD12 /* AppDelegate.swift in Sources */,
 				DA0D37A625DC59D10005BD12 /* SceneDelegate.swift in Sources */,
