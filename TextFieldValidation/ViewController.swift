@@ -22,11 +22,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         validations.delegate = self
-        validations.addTextField(nameTextField, validations: [.maxCharacters(num: 5)])
+        validations.addTextField(nameTextField, validations: [.customRegex(regex: "^\\D+$", key: "onlyLetters"), .maxCharacters(num: 5)])
         validations.addTextField(emailTextField, validations: [.email])
     }
 }
 
+// MARK: - TextFieldValidationDelegate
 extension ViewController: TextFieldValidationDelegate {
     
     func validationResult(textField: UITextField, error: TextFieldValidationError?) -> Void {

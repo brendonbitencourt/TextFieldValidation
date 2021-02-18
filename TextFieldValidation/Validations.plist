@@ -16,5 +16,12 @@
 		<key>shortMessage</key>
 		<string>Inválido</string>
 	</dict>
+	<key>onlyLetters</key>
+	<dict>
+		<key>message</key>
+		<string>Apenas letras</string>
+		<key>shortMessage</key>
+		<string>Inválido</string>
+	</dict>
 </dict>
 </plist>

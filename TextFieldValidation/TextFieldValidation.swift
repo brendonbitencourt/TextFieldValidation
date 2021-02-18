@@ -12,6 +12,7 @@ import UIKit
 enum TextFieldValidationType {
     case email
     case maxCharacters(num: Int)
+    case customRegex(regex: String, key: String)
     
     func validate(text: String?) -> TextFieldValidationError? {
         switch self {
@@ -19,6 +20,8 @@ enum TextFieldValidationType {
                 return TextFieldValidationFunctions.email(text)
             case .maxCharacters(num: let num):
                 return TextFieldValidationFunctions.maxCharacters(text, num)
+            case .customRegex(regex: let regex, key: let key):
+                return TextFieldValidationFunctions.customRegex(text, regex, key)
         }
     }
     
@@ -36,6 +39,8 @@ enum TextFieldValidationType {
                 return self.getInfoFromPlist(key: "email")
             case .maxCharacters(num: _):
                 return self.getInfoFromPlist(key: "maxCharacters")
+            case .customRegex(regex: _, key: let key):
+                return self.getInfoFromPlist(key: key)
         }
     }
     
@@ -101,12 +106,14 @@ class TextFieldValidation {
         if let textField = validationModel?.textField {
             let textInput = validationModel?.textField?.text
             
-            var error: TextFieldValidationError? = nil
+            var listError = [TextFieldValidationError]()
             validationModel?.validations?.forEach({ (type) in
-                error = type.validate(text: textInput)
+                if let error = type.validate(text: textInput) {
+                    listError.append(error)
+                }
             })
             
-            self.delegate?.validationResult(textField: textField, error: error)
+            self.delegate?.validationResult(textField: textField, error: listError.last)
         }
     }
 }
@@ -132,6 +139,19 @@ class TextFieldValidationFunctions {
         let error = TextFieldValidationType.maxCharacters(num: number)
         let regEx = "^.{0,\(String(number))}$"
         let predicate = NSPredicate(format:"SELF MATCHES %@", regEx)
+        let isValid = predicate.evaluate(with: text)
+        
+        if !isValid {
+            return TextFieldValidationError(message: error.getMessage(), shortMessage: error.getShortMessage(), type: error)
+        }
+        
+        return nil
+    }
+    
+    static func customRegex(_ text: String?, _ regex: String, _ key: String) -> TextFieldValidationError? {
+        
+        let error = TextFieldValidationType.customRegex(regex: regex, key: key)
+        let predicate = NSPredicate(format:"SELF MATCHES %@", regex)
         let isValid = predicate.evaluate(with: text)
         
         if !isValid {
