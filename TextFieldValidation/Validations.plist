@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>email</key>
+	<dict>
+		<key>message</key>
+		<string>Email inválido</string>
+		<key>shortMessage</key>
+		<string>Inválido</string>
+	</dict>
+	<key>maxCharacters</key>
+	<dict>
+		<key>message</key>
+		<string>Numero máximo de caracteres atingido </string>
+		<key>shortMessage</key>
+		<string>Inválido</string>
+	</dict>
+</dict>
+</plist>

@@ -16,6 +16,7 @@
 		DA0D37BB25DC59D30005BD12 /* TextFieldValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D37BA25DC59D30005BD12 /* TextFieldValidationTests.swift */; };
 		DA0D37C625DC59D30005BD12 /* TextFieldValidationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D37C525DC59D30005BD12 /* TextFieldValidationUITests.swift */; };
 		DA0D37D725DC5AF30005BD12 /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D37D625DC5AF30005BD12 /* TextFieldValidation.swift */; };
+		DA8E8A9325DDDB760077C19C /* Validations.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA8E8A9225DDDB760077C19C /* Validations.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		DA0D37C525DC59D30005BD12 /* TextFieldValidationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidationUITests.swift; sourceTree = "<group>"; };
 		DA0D37C725DC59D30005BD12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA0D37D625DC5AF30005BD12 /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
+		DA8E8A9225DDDB760077C19C /* Validations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Validations.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				DA0D37AE25DC59D20005BD12 /* LaunchScreen.storyboard */,
 				DA0D37B125DC59D20005BD12 /* Info.plist */,
 				DA0D37D625DC5AF30005BD12 /* TextFieldValidation.swift */,
+				DA8E8A9225DDDB760077C19C /* Validations.plist */,
 			);
 			path = TextFieldValidation;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA0D37B025DC59D20005BD12 /* LaunchScreen.storyboard in Resources */,
+				DA8E8A9325DDDB760077C19C /* Validations.plist in Resources */,
 				DA0D37AD25DC59D20005BD12 /* Assets.xcassets in Resources */,
 				DA0D37AB25DC59D10005BD12 /* Main.storyboard in Resources */,
 			);
