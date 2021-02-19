@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameTextFieldErrorLabel: UILabel!
     @IBOutlet weak var emailTextField: BTextField!
     @IBOutlet weak var emailTextFieldErrorLabel: UILabel!
+    @IBOutlet weak var enterButton: UIButton!
     
     //MARK: - Variables
     let validations = TextFieldValidation()
@@ -22,13 +23,24 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         validations.delegate = self
-        validations.addTextField(nameTextField, validations: [.customRegex(regex: "^\\D+$", key: "onlyLetters"), .maxCharacters(num: 5)])
-        validations.addTextField(emailTextField, validations: [.email])
+        validations.addTextField(nameTextField, validations: [.maxCharacters(num: 5), .required])
+        validations.addTextField(emailTextField, validations: [.email, .required])
+        // Validate all Textfields
+        validations.updateStatus()
+    }
+    
+    //MARK: - Actions
+    @IBAction func enterClicked(_ sender: Any) {
+        print("Button Clicked")
     }
 }
 
 // MARK: - TextFieldValidationDelegate
 extension ViewController: TextFieldValidationDelegate {
+    
+    func validationStatus(isValid: Bool) {
+        self.enterButton.isEnabled = isValid
+    }
     
     func validationResult(textField: UITextField, error: TextFieldValidationError?) -> Void {
         switch textField {

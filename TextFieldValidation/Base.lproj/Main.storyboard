@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kVa-ac-lWq">
-                                <rect key="frame" x="16" y="104" width="382" height="145"/>
+                                <rect key="frame" x="16" y="104" width="382" height="205"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ix3-MS-meD">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="62.5"/>
@@ -75,6 +75,25 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mcn-ro-ohU">
+                                        <rect key="frame" x="0.0" y="165" width="382" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6P2-Nf-SX5">
+                                                <rect key="frame" x="141" y="0.0" width="100" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="KHt-RG-WXc"/>
+                                                    <constraint firstAttribute="width" constant="100" id="S70-OD-BSQ"/>
+                                                </constraints>
+                                                <state key="normal" title="Enter">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="enterClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZOG-Op-q4Y"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -90,6 +109,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="uTG-qR-Xfh" id="phq-HB-QkP"/>
                         <outlet property="emailTextFieldErrorLabel" destination="d4x-g3-EVR" id="BSr-mG-yOF"/>
+                        <outlet property="enterButton" destination="6P2-Nf-SX5" id="hSf-zM-PaQ"/>
                         <outlet property="nameTextField" destination="Hqv-Ia-I81" id="pDO-D3-wIb"/>
                         <outlet property="nameTextFieldErrorLabel" destination="pWb-DD-xTk" id="5C7-pq-aeO"/>
                     </connections>
@@ -120,6 +140,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

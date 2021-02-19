@@ -9,6 +9,13 @@
 		<key>shortMessage</key>
 		<string>Inválido</string>
 	</dict>
+	<key>required</key>
+	<dict>
+		<key>message</key>
+		<string>Campo obrigatório</string>
+		<key>shortMessage</key>
+		<string>Inválido</string>
+	</dict>
 	<key>maxCharacters</key>
 	<dict>
 		<key>message</key>
