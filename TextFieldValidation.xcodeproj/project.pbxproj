@@ -17,6 +17,13 @@
 		DA0D37C625DC59D30005BD12 /* TextFieldValidationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D37C525DC59D30005BD12 /* TextFieldValidationUITests.swift */; };
 		DA0D37D725DC5AF30005BD12 /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D37D625DC5AF30005BD12 /* TextFieldValidation.swift */; };
 		DA8E8A9325DDDB760077C19C /* Validations.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA8E8A9225DDDB760077C19C /* Validations.plist */; };
+		DAF6111025F574CB00E48DEE /* TextFieldValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF6110F25F574CB00E48DEE /* TextFieldValidationType.swift */; };
+		DAF6111525F574ED00E48DEE /* TextFieldValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF6111425F574ED00E48DEE /* TextFieldValidationError.swift */; };
+		DAF6111A25F5750100E48DEE /* TextFieldValidationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF6111925F5750100E48DEE /* TextFieldValidationModel.swift */; };
+		DAF6111F25F5752600E48DEE /* TextFieldValidationMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF6111E25F5752600E48DEE /* TextFieldValidationMessages.swift */; };
+		DAF6112425F5755000E48DEE /* TextFieldValidationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF6112325F5755000E48DEE /* TextFieldValidationDelegate.swift */; };
+		DAF6112925F5756900E48DEE /* TextFieldValidationFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF6112825F5756900E48DEE /* TextFieldValidationFunctions.swift */; };
+		DAF6112E25F5759700E48DEE /* BTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF6112D25F5759700E48DEE /* BTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,13 @@
 		DA0D37C725DC59D30005BD12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA0D37D625DC5AF30005BD12 /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
 		DA8E8A9225DDDB760077C19C /* Validations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Validations.plist; sourceTree = "<group>"; };
+		DAF6110F25F574CB00E48DEE /* TextFieldValidationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidationType.swift; sourceTree = "<group>"; };
+		DAF6111425F574ED00E48DEE /* TextFieldValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidationError.swift; sourceTree = "<group>"; };
+		DAF6111925F5750100E48DEE /* TextFieldValidationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidationModel.swift; sourceTree = "<group>"; };
+		DAF6111E25F5752600E48DEE /* TextFieldValidationMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidationMessages.swift; sourceTree = "<group>"; };
+		DAF6112325F5755000E48DEE /* TextFieldValidationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidationDelegate.swift; sourceTree = "<group>"; };
+		DAF6112825F5756900E48DEE /* TextFieldValidationFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidationFunctions.swift; sourceTree = "<group>"; };
+		DAF6112D25F5759700E48DEE /* BTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,14 +117,15 @@
 		DA0D37A225DC59D10005BD12 /* TextFieldValidation */ = {
 			isa = PBXGroup;
 			children = (
+				DAF6110E25F574B700E48DEE /* Validation */,
 				DA0D37A325DC59D10005BD12 /* AppDelegate.swift */,
 				DA0D37A525DC59D10005BD12 /* SceneDelegate.swift */,
 				DA0D37A725DC59D10005BD12 /* ViewController.swift */,
+				DAF6112D25F5759700E48DEE /* BTextField.swift */,
 				DA0D37A925DC59D10005BD12 /* Main.storyboard */,
 				DA0D37AC25DC59D20005BD12 /* Assets.xcassets */,
 				DA0D37AE25DC59D20005BD12 /* LaunchScreen.storyboard */,
 				DA0D37B125DC59D20005BD12 /* Info.plist */,
-				DA0D37D625DC5AF30005BD12 /* TextFieldValidation.swift */,
 				DA8E8A9225DDDB760077C19C /* Validations.plist */,
 			);
 			path = TextFieldValidation;
@@ -132,6 +147,20 @@
 				DA0D37C725DC59D30005BD12 /* Info.plist */,
 			);
 			path = TextFieldValidationUITests;
+			sourceTree = "<group>";
+		};
+		DAF6110E25F574B700E48DEE /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				DA0D37D625DC5AF30005BD12 /* TextFieldValidation.swift */,
+				DAF6112825F5756900E48DEE /* TextFieldValidationFunctions.swift */,
+				DAF6110F25F574CB00E48DEE /* TextFieldValidationType.swift */,
+				DAF6111425F574ED00E48DEE /* TextFieldValidationError.swift */,
+				DAF6111925F5750100E48DEE /* TextFieldValidationModel.swift */,
+				DAF6111E25F5752600E48DEE /* TextFieldValidationMessages.swift */,
+				DAF6112325F5755000E48DEE /* TextFieldValidationDelegate.swift */,
+			);
+			path = Validation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,10 +294,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF6112425F5755000E48DEE /* TextFieldValidationDelegate.swift in Sources */,
+				DAF6111F25F5752600E48DEE /* TextFieldValidationMessages.swift in Sources */,
+				DAF6112925F5756900E48DEE /* TextFieldValidationFunctions.swift in Sources */,
 				DA0D37D725DC5AF30005BD12 /* TextFieldValidation.swift in Sources */,
+				DAF6111025F574CB00E48DEE /* TextFieldValidationType.swift in Sources */,
+				DAF6111A25F5750100E48DEE /* TextFieldValidationModel.swift in Sources */,
 				DA0D37A825DC59D10005BD12 /* ViewController.swift in Sources */,
+				DAF6111525F574ED00E48DEE /* TextFieldValidationError.swift in Sources */,
 				DA0D37A425DC59D10005BD12 /* AppDelegate.swift in Sources */,
 				DA0D37A625DC59D10005BD12 /* SceneDelegate.swift in Sources */,
+				DAF6112E25F5759700E48DEE /* BTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
