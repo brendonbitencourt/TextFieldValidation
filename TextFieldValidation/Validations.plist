@@ -2,33 +2,67 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>email</key>
+	<key>en-US</key>
 	<dict>
-		<key>message</key>
-		<string>Email inválido</string>
-		<key>shortMessage</key>
-		<string>Inválido</string>
+		<key>email</key>
+		<dict>
+			<key>message</key>
+			<string>Invalid email</string>
+			<key>shortMessage</key>
+			<string>Invalid</string>
+		</dict>
+		<key>required</key>
+		<dict>
+			<key>message</key>
+			<string>Required field</string>
+			<key>shortMessage</key>
+			<string>Invalid</string>
+		</dict>
+		<key>maxCharacters</key>
+		<dict>
+			<key>message</key>
+			<string>Maximum number of characters reached</string>
+			<key>shortMessage</key>
+			<string>Invalid</string>
+		</dict>
+		<key>onlyLetters</key>
+		<dict>
+			<key>message</key>
+			<string>Only letters</string>
+			<key>shortMessage</key>
+			<string>Invalid</string>
+		</dict>
 	</dict>
-	<key>required</key>
+	<key>pt-BR</key>
 	<dict>
-		<key>message</key>
-		<string>Campo obrigatório</string>
-		<key>shortMessage</key>
-		<string>Inválido</string>
-	</dict>
-	<key>maxCharacters</key>
-	<dict>
-		<key>message</key>
-		<string>Numero máximo de caracteres atingido </string>
-		<key>shortMessage</key>
-		<string>Inválido</string>
-	</dict>
-	<key>onlyLetters</key>
-	<dict>
-		<key>message</key>
-		<string>Apenas letras</string>
-		<key>shortMessage</key>
-		<string>Inválido</string>
+		<key>email</key>
+		<dict>
+			<key>message</key>
+			<string>Email inválido</string>
+			<key>shortMessage</key>
+			<string>Inválido</string>
+		</dict>
+		<key>required</key>
+		<dict>
+			<key>message</key>
+			<string>Campo obrigatório</string>
+			<key>shortMessage</key>
+			<string>Inválido</string>
+		</dict>
+		<key>maxCharacters</key>
+		<dict>
+			<key>message</key>
+			<string>Numero máximo de caracteres atingido </string>
+			<key>shortMessage</key>
+			<string>Inválido</string>
+		</dict>
+		<key>onlyLetters</key>
+		<dict>
+			<key>message</key>
+			<string>Apenas letras</string>
+			<key>shortMessage</key>
+			<string>Inválido</string>
+		</dict>
 	</dict>
 </dict>
 </plist>

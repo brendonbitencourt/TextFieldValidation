@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         validations.delegate = self
+        validations.setLocale("pt-BR")
         validations.addTextField(nameTextField, validations: [.maxCharacters(num: 5), .required])
         validations.addTextField(emailTextField, validations: [.email, .required])
         // Validate all Textfields

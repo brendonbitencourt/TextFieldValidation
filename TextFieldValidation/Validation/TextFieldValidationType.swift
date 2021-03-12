@@ -13,7 +13,7 @@ enum TextFieldValidationType {
     case maxCharacters(num: Int)
     case customRegex(regex: String, key: String)
     
-    func validate(text: String?) -> TextFieldValidationError? {
+    func validate(text: String?) -> TextFieldValidationType? {
         switch self {
             case .email:
                 return TextFieldValidationFunctions.email(text)
@@ -26,36 +26,28 @@ enum TextFieldValidationType {
         }
     }
     
-    func getMessage() -> String? {
-        return self.getMessageModel()?.message
-    }
-    
-    func getShortMessage() -> String? {
-        return self.getMessageModel()?.shortMessage
-    }
-    
-    private func getMessageModel() -> TextFieldValidationMessages? {
+    func getMessageModel(_ locale: String) -> TextFieldValidationMessages? {
         switch self {
             case .email:
-                return self.getInfoFromPlist(key: "email")
+                return self.getInfoFromPlist(locale, key: "email")
             case .required:
-                return self.getInfoFromPlist(key: "required")
+                return self.getInfoFromPlist(locale, key: "required")
             case .maxCharacters(num: _):
-                return self.getInfoFromPlist(key: "maxCharacters")
+                return self.getInfoFromPlist(locale, key: "maxCharacters")
             case .customRegex(regex: _, key: let key):
-                return self.getInfoFromPlist(key: key)
+                return self.getInfoFromPlist(locale, key: key)
         }
     }
     
-    private func getInfoFromPlist(key: String) -> TextFieldValidationMessages? {
+    private func getInfoFromPlist(_ locale: String, key: String) -> TextFieldValidationMessages? {
         guard
             let path = Bundle.main.path(forResource: "Validations", ofType: "plist"),
             let xml = FileManager.default.contents(atPath: path)
         else { return nil }
         
         do {
-            let preferences = try PropertyListDecoder().decode([String:TextFieldValidationMessages].self, from: xml)
-            return preferences[key]
+            let preferences = try PropertyListDecoder().decode([String:[String:TextFieldValidationMessages]].self, from: xml)
+            return preferences[locale]?[key]
         } catch {
             print(error.localizedDescription)
             return nil

@@ -12,6 +12,7 @@ class TextFieldValidation {
     
     weak var delegate: TextFieldValidationDelegate?
     private var validationsModel = [TextFieldValidationModel]()
+    private var locale = "en-US"
     
     init() {}
     
@@ -36,6 +37,10 @@ class TextFieldValidation {
         self.delegate?.validationStatus(isValid: !hasError)
     }
     
+    public func setLocale(_ locale: String) {
+        self.locale = locale
+    }
+    
     //MARK: Private Functions
     @objc private func editingDidBegin(_ textField: UITextField) {
         let validationModel = validationsModel.first(where: { (textFieldValidationModel) -> Bool in
@@ -54,7 +59,9 @@ class TextFieldValidation {
         if let validationModel = validationModel {
             let textInput = validationModel.textField?.text
             validationModel.validations?.forEach({ (type) in
-                if let error = type.validate(text: textInput) {
+                if let errorType = type.validate(text: textInput) {
+                    let messageModel = errorType.getMessageModel(locale)
+                    let error = TextFieldValidationError(message: messageModel?.message, shortMessage: messageModel?.shortMessage, type: errorType)
                     listErrors.append(error)
                 }
             })
